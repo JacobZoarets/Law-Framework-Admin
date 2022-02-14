@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+
+        window.onload = function () {
+            $.get('https://www.quaker.co.il/%D7%9E%D7%AA%D7%9B%D7%95%D7%A0%D7%99%D7%9D/%D7%9C%D7%91%D7%99%D7%91%D7%95%D7%AA_%D7%A7%D7%95%D7%95%D7%90%D7%A7%D7%A8_%D7%9C%D7%9C%D7%90_%D7%92%D7%9C%D7%95%D7%98%D7%9F',
+                function (data) {
+                    alert( $(data).find('meta[name=adescription]').attr("content"));
+                });
+
+            //$.ajax({
+            //    type: 'GET',
+            //    url: 'https://www.youtube.com/watch?v=v946FUHD_Co',
+            //    dataType: 'html',
+            //    success: function (data) {
+
+            //        //cross platform xml object creation from w3schools
+            //        try //Internet Explorer
+            //        {
+            //            xmlDoc = new ActiveXObject("Microsoft.XMLDOM");
+            //            xmlDoc.async = "false";
+            //            xmlDoc.loadXML(data);
+            //        }
+            //        catch (e) {
+            //            try // Firefox, Mozilla, Opera, etc.
+            //            {
+            //                parser = new DOMParser();
+            //                xmlDoc = parser.parseFromString(data, "text/xml");
+            //            }
+            //            catch (e) {
+            //                alert(e.message);
+            //                return;
+            //            }
+            //        }
+
+            //        alert(xmlDoc.getElementsByTagName("title")[0].childNodes[0].nodeValue);
+            //    }
+            //});
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

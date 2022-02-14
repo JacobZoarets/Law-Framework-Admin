@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Tester page 4 LeadsImport interface</title>
+    <meta charset="windows-1255" />
+</head>
+<body>
+    <script language=javascript>
+        var xmlHttp = null; function urlencode(str) { return escape(str).replace('+', '%2B').replace('%20', '+').replace('*', '%2A').replace('/', '%2F').replace('@', '%40'); } function urldecode(str) { return unescape(str.replace('+', ' ')); } function mydosubmit() { var Url = document.getElementById("path").value + "?"; var Urlext = "field1=" + urlencode(document.getElementById("field1").value); Urlext += "&field2=" + urlencode(document.getElementById("field2").value); Urlext += "&createby=" + urlencode(document.getElementById("createby").value); xmlHttp = new XMLHttpRequest(); xmlHttp.onreadystatechange = ProcessRequest; xmlHttp.open(document.getElementById("method").value, Url + Urlext, true); xmlHttp.send(null); } function ProcessRequest() {
+            if (xmlHttp.readyState == 4) {
+                var info = "unknown error"; var el = document.getElementById("result"); if (xmlHttp.status == 200) { info = urldecode(xmlHttp.responseText); } else if (xmlHttp.status == 12029) { info = "The attempt to connect to the server failed"; } else if (xmlHttp.status == 12007) { info = "The server name could not be resolved"; } else if (xmlHttp.status == 404) {
+                    info = "Page or application not found";
+                } El.value = info;
+            }
+        }</script>
+    <form name="input" action="http://localhost:8083/LeadsImport/Klita" method="get"> send to: <input type="text" name="path" value="http://localhost:8083/LeadsImport/Klita" style="width:350px" /> <br>method: <input type="text" name="method" value="GET" /> <br>createby: <input type="text" name="createby" value="dima" /> <br>field1: <input type="text" name="field1" value=" "/>הסטודנטים אגודת <br>field2: <input type="text" name="field2" value=" "/>בדיקה <br><input type="submit" value="Submit default" /> <br><input type="button" value="Send custom" onclick=" mydosubmit();" /> </form>  <br>request result:<br><input type="text" name="result" value="" style="width:300px;height:300px" />
+</body>
+</html> 

@@ -1,0 +1,101 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>jQuery UI Tabs - Vertical Tabs functionality</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://jqueryui.com/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="https://app.botsociety.io/dist/complete.css?version=1.4.4a">
+    <link rel="stylesheet" href="https://app.botsociety.io/css/lib/angular-material.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <link rel="stylesheet" href="https://app.botsociety.io/css/bootstrap.css">
+
+    <script>
+        $(function () {
+            $("#tabs").tabs();
+        });
+    </script>
+
+</head>
+<body>
+
+    <div style="width:22em" id="tabs">
+        <ul>
+            <li>
+                <a href="#tabs-1">
+                    <md-icon class="ng-scope material-icons" role="img" aria-hidden="true">text_format</md-icon>
+                </a>
+            </li>
+            <li>
+                <a href="#tabs-2">
+                    <md-icon class="ng-scope material-icons" role="img" aria-hidden="true">view_carousel</md-icon>
+                </a>
+            </li>
+            <li>
+                <a href="#tabs-3">
+                    <md-icon class="ng-scope material-icons" role="img" aria-hidden="true">add_a_photo</md-icon>
+                </a>
+            </li>
+            <li>
+                <a href="#tabs-4">
+                    <md-icon class="ng-scope material-icons" role="img" aria-hidden="true">view_list</md-icon>
+                </a>
+            </li>
+            <li>
+                <a href="#tabs-5">
+                    <md-icon class="ng-scope material-icons" role="img" aria-hidden="true">power_input</md-icon>
+                </a>
+            </li>
+        </ul>
+        <div id="tabs-1">
+            <p>
+                <img src="images/text_massege.JPG" />
+            </p>
+
+            <i id="text-button1" class="material-icons">add_circle</i>
+        </div>
+        <div id="tabs-2">
+            <p>
+                <img src="images/caruosel_masseage.JPG" />
+            </p>
+
+            <i id="caruosel-button1" class="material-icons">add_circle</i>
+        </div>
+        <div id="tabs-3">
+            <p>
+                <img src="images/image-message.JPG" />
+            </p>
+
+            <i id="image-button1" class="material-icons">add_circle</i>
+        </div>
+        <div id="tabs-4">
+            <p>
+                <img src="images/buttons_list_message.JPG" />
+            </p>
+
+            <i id="buttons_list-button1" class="material-icons">add_circle</i>
+        </div>
+        <div id="tabs-5">
+            <p>
+                <img width="250px" src="images/quick-replys-message.JPG" />
+            </p>
+
+            <i id="quick-replys-button1" class="material-icons">add_circle</i>
+        </div>
+    </div>
+
+    <table width="200px">
+        <tr>
+            <td><a id="text-button" href="#tabs-1"><md-icon class="ng-scope material-icons" role="img" aria-hidden="true">text_format</md-icon></a></td>
+            <td><a id="caruosel-button" href="#tabs-1"><md-icon class="ng-scope material-icons" role="img" aria-hidden="true">view_carousel</md-icon></a></td>
+            <td><a id="image-button" href="#tabs-1"><md-icon class="ng-scope material-icons" role="img" aria-hidden="true">add_a_photo</md-icon></a></td>
+            <td><a id="buttons_list-button" href="#tabs-1"><md-icon class="ng-scope material-icons" role="img" aria-hidden="true">view_list</md-icon></a></td>
+            <td><a id="quick-replys-button" href="#tabs-1"><md-icon class="ng-scope material-icons" role="img" aria-hidden="true">power_input</md-icon></a></td>
+        </tr>
+    </table>
+</body>
+</html>
